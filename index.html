@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pesquisa de Campo — Vendedores e Comércio</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
+ 
+  :root {
+    --ink: #1a1510;
+    --paper: #f5f0e8;
+    --accent: #c94a2e;
+    --rule: #b8aa96;
+    --muted: #7a6e60;
+    --field: #ede8df;
+  }
+ 
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+ 
+  .page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 40px;
+  }
+ 
+  /* HEADER */
+  .header {
+    border-top: 3px solid var(--ink);
+    border-bottom: 3px solid var(--ink);
+    padding: 20px 0;
+    margin-bottom: 40px;
+    position: relative;
+  }
+  .header::after {
+    content: '';
+    display: block;
+    border-bottom: 1px solid var(--ink);
+    margin-top: 4px;
+  }
+  .header-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .header-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 26px;
+    color: var(--ink);
+    line-height: 1.15;
+  }
+  .header-title span {
+    color: var(--accent);
+    font-style: italic;
+  }
+  .header-meta {
+    margin-top: 10px;
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+  .header-meta strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+ 
+  /* BLOCKS */
+  .block {
+    margin-bottom: 44px;
+    page-break-inside: avoid;
+  }
+ 
+  .block-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+  }
+  .block-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 11px;
+    font-style: italic;
+    color: var(--accent);
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+  .block-title {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--ink);
+  }
+ 
+  /* QUESTIONS */
+  .question {
+    margin-bottom: 26px;
+  }
+  .question-row {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    margin-bottom: 7px;
+  }
+  .q-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 13px;
+    color: var(--accent);
+    min-width: 22px;
+    font-style: italic;
+  }
+  .q-text {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--ink);
+    line-height: 1.5;
+  }
+  .answer-line {
+    height: 1px;
+    background: var(--rule);
+    margin: 10px 0 8px 32px;
+    position: relative;
+  }
+  .answer-line::before {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -9px;
+    height: 1px;
+    background: var(--rule);
+  }
+  .answer-line::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; bottom: -18px;
+    height: 1px;
+    background: var(--rule);
+  }
+  .spacer { height: 28px; }
+ 
+  /* LONG ANSWER */
+  .answer-area {
+    margin-left: 32px;
+    margin-top: 10px;
+  }
+  .answer-area .line {
+    height: 1px;
+    background: var(--rule);
+    margin-bottom: 11px;
+  }
+ 
+  /* FOOTER */
+  .footer {
+    margin-top: 48px;
+    border-top: 3px double var(--ink);
+    padding-top: 16px;
+    text-align: center;
+  }
+  .footer p {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+    line-height: 1.8;
+  }
+  .footer strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+ 
+  @media print {
+    body { background: white; }
+    .page { padding: 32px 28px; }
+    .block { page-break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+ 
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-label">Pesquisa de Campo</div>
+    <div class="header-title">Vendedores e <span>Comércio</span></div>
+    <div class="header-meta">
+      Aplicação <strong>presencial</strong> · Respostas <strong>anônimas</strong>
+    </div>
+  </div>
+ 
+  <!-- BLOCO 1 -->
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">Bloco 01</span>
+      <span class="block-title">Perfil do Vendedor</span>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">1.</span>
+        <span class="q-text">Há quanto tempo você trabalha neste comércio?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">2.</span>
+        <span class="q-text">Qual é o seu principal papel no dia a dia de trabalho?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">3.</span>
+        <span class="q-text">Você já trabalhou em outro comércio antes deste? Se sim, em qual área ou setor?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+  </div>
+ 
+  <!-- BLOCO 2 -->
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">Bloco 02</span>
+      <span class="block-title">Dificuldades no Trabalho</span>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">4.</span>
+        <span class="q-text">Qual é a maior dificuldade que você enfrenta no seu dia a dia de trabalho?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">5.</span>
+        <span class="q-text">Com que frequência você se depara com falta de produto ou de informação para responder ao cliente? Como isso costuma acontecer?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">6.</span>
+        <span class="q-text">O que mais dificulta o fechamento de uma venda, na sua experiência?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">7.</span>
+        <span class="q-text">Quando surgem problemas no atendimento, existe um processo claro de como resolvê-los? Descreva como funciona.</span>
+      </div>
+      <div class="answer-area">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">8.</span>
+        <span class="q-text">Quando um cliente reclama, você sabe exatamente o que fazer? Como você costuma agir nesses momentos?</span>
+      </div>
+      <div class="answer-area">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- BLOCO 3 -->
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">Bloco 03</span>
+      <span class="block-title">Condições e Reconhecimento</span>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">9.</span>
+        <span class="q-text">Como você avalia as condições operacionais do seu dia a dia de trabalho? O que funciona bem e o que poderia melhorar?</span>
+      </div>
+      <div class="answer-area">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">10.</span>
+        <span class="q-text">O comércio reconhece e comunica os bons resultados da equipe de vendas? Como isso acontece?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">11.</span>
+        <span class="q-text">O que mais te motiva a continuar neste trabalho?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+  </div>
+ 
+  <!-- BLOCO 4 -->
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">Bloco 04</span>
+      <span class="block-title">Estrutura e Gestão</span>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">12.</span>
+        <span class="q-text">Os processos internos — como troca, devolução e pagamento — são claros para você? Tem algo que ainda gera dúvida?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">13.</span>
+        <span class="q-text">Você recebeu algum treinamento formal para exercer sua função aqui? Como foi?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">14.</span>
+        <span class="q-text">Na sua opinião, qual área do comércio mais precisa melhorar e por quê?</span>
+      </div>
+      <div class="answer-area">
+        <div class="line"></div><div class="line"></div><div class="line"></div>
+      </div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">15.</span>
+        <span class="q-text">As ferramentas e sistemas que você usa no trabalho facilitam ou atrapalham sua rotina? Por quê?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+  </div>
+ 
+  <!-- BLOCO 5 -->
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">Bloco 05</span>
+      <span class="block-title">Concorrência</span>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">16.</span>
+        <span class="q-text">Com que frequência os clientes mencionam concorrentes durante o atendimento? O que costumam dizer?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">17.</span>
+        <span class="q-text">Este comércio comunica claramente seus diferenciais para a equipe de vendas? Como isso é feito?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num">18.</span>
+        <span class="q-text">Na sua percepção, qual é o principal motivo pelo qual um cliente escolhe a concorrência em vez deste comércio?</span>
+      </div>
+      <div class="answer-line"></div><div class="spacer"></div>
+    </div>
+  </div>
+ 
+  <!-- BLOCO 6 -->
+  <div class="block">
+    <div class="block-header">
+      <span class="block-num">Bloco 06</span>
+      <span class="block-title">Sazonalidade e Fluxo</span>
+    </div>
+ 
+    <div class="question">
+      <div class="question-row">
+        <span class="q-num
