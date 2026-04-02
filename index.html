@@ -1,156 +1,71 @@
-<!DOCTYPE html>
-
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesquisa SENAC</title>
-
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f4f6f8;
-  margin: 0;
-}
-
-.header {
-  background: white;
-  border-bottom: 4px solid #f37021;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.logo { width: 60px; }
-
-.title h1 {
-  margin: 0;
-  color: #004a8f;
-  font-size: 20px;
-}
-
-.title span {
-  color: #f37021;
-  font-weight: bold;
-}
-
-.container {
-  max-width: 800px;
-  margin: 20px auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-}
-
-h2 {
-  color: #004a8f;
-  border-left: 5px solid #f37021;
-  padding-left: 10px;
-}
-
-.question {
-  margin: 20px 0;
-  padding: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-label {
-  display: block;
-  margin: 5px 0;
-  cursor: pointer;
-}
-
-textarea {
-  width: 100%;
-  height: 80px;
-  margin-top: 10px;
-}
-
-.slider-value {
-  font-weight: bold;
-  color: #004a8f;
-}
-
-button {
-  background: #f37021;
-  color: white;
-  border: none;
-  padding: 12px;
-  width: 100%;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 16px;
-}
-</style>
-
-</head>
-
-<body>
-
-<div class="header">
-  <img src="logo-senac.png" class="logo">
-  <div class="title">
-    <h1>Projeto Jovem Aprendiz</h1>
-    <span>Pesquisa</span>
-  </div>
-</div>
-
-<form class="container">
-
-<h2>Bloco 1 · Perfil</h2>
+<h2>Bloco 1 · Perfil do Vendedor</h2>
 
 <div class="question">
 <p>1. Há quanto tempo você trabalha neste comércio?</p>
-<label><input type="radio" name="q1" value="menos_6m"> Menos de 6 meses</label>
-<label><input type="radio" name="q1" value="6_12m"> 6 a 12 meses</label>
-<label><input type="radio" name="q1" value="1_3a"> 1 a 3 anos</label>
-<label><input type="radio" name="q1" value="3mais"> Mais de 3 anos</label>
+<label><input type="radio" name="q1"> Menos de 6 meses</label>
+<label><input type="radio" name="q1"> 6 a 12 meses</label>
+<label><input type="radio" name="q1"> 1 a 3 anos</label>
+<label><input type="radio" name="q1"> Mais de 3 anos</label>
 </div>
 
 <div class="question">
-<p>2. Qual é o seu principal papel?</p>
-<label><input type="radio" name="q2" value="vendas"> Vendas</label>
-<label><input type="radio" name="q2" value="atendimento"> Atendimento</label>
-<label><input type="radio" name="q2" value="estoque"> Estoque</label>
-<label><input type="radio" name="q2" value="gestao"> Gestão</label>
+<p>2. Qual é o seu principal papel no dia a dia?</p>
+<label><input type="radio" name="q2"> Vendas diretas</label>
+<label><input type="radio" name="q2"> Atendimento</label>
+<label><input type="radio" name="q2"> Estoque / reposição</label>
+<label><input type="radio" name="q2"> Gestão / supervisão</label>
 </div>
 
 <div class="question">
-<p>3. Já trabalhou antes?</p>
-<label><input type="radio" name="q3" value="mesmo_setor"> Mesmo setor</label>
-<label><input type="radio" name="q3" value="outro_setor"> Outro setor</label>
-<label><input type="radio" name="q3" value="nao"> Não</label>
+<p>3. Você já trabalhou em outro comércio antes deste?</p>
+<label><input type="radio" name="q3"> Mesmo setor</label>
+<label><input type="radio" name="q3"> Outro setor</label>
+<label><input type="radio" name="q3"> Não</label>
 </div>
 
-<h2>Dificuldades</h2>
+<h2>Bloco 2 · Dificuldades</h2>
 
 <div class="question">
 <p>4. Maior dificuldade:</p>
-<label><input type="radio" name="q4" value="treinamento"> Treinamento</label>
-<label><input type="radio" name="q4" value="comunicacao"> Comunicação</label>
-<label><input type="radio" name="q4" value="metas"> Metas</label>
-<label><input type="radio" name="q4" value="sistemas"> Sistemas</label>
-<label><input type="radio" name="q4" value="clientes"> Clientes</label>
+<label><input type="radio" name="q4"> Treinamento</label>
+<label><input type="radio" name="q4"> Comunicação</label>
+<label><input type="radio" name="q4"> Metas</label>
+<label><input type="radio" name="q4"> Sistemas</label>
+<label><input type="radio" name="q4"> Clientes</label>
+</div>
+
+<div class="question">
+<p>5. Frequência de falta de produto/informação:</p>
+<label><input type="radio" name="q5"> Raramente</label>
+<label><input type="radio" name="q5"> Às vezes</label>
+<label><input type="radio" name="q5"> Com frequência</label>
+<label><input type="radio" name="q5"> Quase sempre</label>
 </div>
 
 <div class="question">
 <p>6. Dificuldade na venda (até 2):</p>
-<label><input type="checkbox" name="q6" value="preco"> Preço</label>
-<label><input type="checkbox" name="q6" value="produto"> Falta de produto</label>
-<label><input type="checkbox" name="q6" value="cliente"> Cliente indeciso</label>
-<label><input type="checkbox" name="q6" value="info"> Falta de info</label>
-<label><input type="checkbox" name="q6" value="concorrencia"> Concorrência</label>
+<label><input type="checkbox" name="q6"> Preço</label>
+<label><input type="checkbox" name="q6"> Produto</label>
+<label><input type="checkbox" name="q6"> Cliente</label>
+<label><input type="checkbox" name="q6"> Informação</label>
+<label><input type="checkbox" name="q6"> Concorrência</label>
 </div>
 
 <div class="question">
-<p>7. Existe processo claro?</p>
+<p>7. Processo claro?</p>
 <input type="range" min="1" max="5" value="3" name="q7" oninput="updateValue(this,'v7')">
 <div class="slider-value">Valor: <span id="v7">3</span></div>
 </div>
 
-<h2>Percepção</h2>
+<div class="question">
+<p>8. Sabe lidar com reclamações?</p>
+<label><input type="radio" name="q8"> Sempre</label>
+<label><input type="radio" name="q8"> Maioria</label>
+<label><input type="radio" name="q8"> Às vezes</label>
+<label><input type="radio" name="q8"> Não</label>
+</div>
+
+<h2>Bloco 3 · Condições</h2>
 
 <div class="question">
 <p>9. Condições de trabalho:</p>
@@ -159,19 +74,321 @@ button {
 </div>
 
 <div class="question">
+<p>10. Reconhecimento:</p>
+<label><input type="radio" name="q10"> Sim</label>
+<label><input type="radio" name="q10"> Às vezes</label>
+<label><input type="radio" name="q10"> Raramente</label>
+<label><input type="radio" name="q10"> Não</label>
+</div>
+
+<div class="question">
+<p>11. Motivação:</p>
+<label><input type="radio" name="q11"> Salário</label>
+<label><input type="radio" name="q11"> Equipe</label>
+<label><input type="radio" name="q11"> Estabilidade</label>
+<label><input type="radio" name="q11"> Crescimento</label>
+<label><input type="radio" name="q11"> Produto</label>
+</div>
+
+<h2>Bloco 4 · Estrutura</h2>
+
+<div class="question">
+<p>12. Processos claros:</p>
+<input type="range" min="1" max="5" value="3" name="q12" oninput="updateValue(this,'v12')">
+<div class="slider-value">Valor: <span id="v12">3</span></div>
+</div>
+
+<div class="question">
+<p>13. Treinamento:</p>
+<label><input type="radio" name="q13"> Completo</label>
+<label><input type="radio" name="q13"> Parcial</label>
+<label><input type="radio" name="q13"> Não</label>
+</div>
+
+<div class="question">
+<p>14. Área a melhorar:</p>
+<label><input type="radio" name="q14"> Estoque</label>
+<label><input type="radio" name="q14"> Atendimento</label>
+<label><input type="radio" name="q14"> Gestão</label>
+<label><input type="radio" name="q14"> Marketing</label>
+<label><input type="radio" name="q14"> Espaço físico</label>
+</div>
+
+<div class="question">
+<p>15. Sistemas:</p>
+<label><input type="radio" name="q15"> Facilitam</label>
+<label><input type="radio" name="q15"> Neutro</label>
+<label><input type="radio" name="q15"> Atrapalham</label>
+</div>
+
+<h2>Bloco 5 · Concorrência</h2>
+
+<div class="question">
+<p>16. Clientes mencionam concorrência:</p>
+<label><input type="radio" name="q16"> Raramente</label>
+<label><input type="radio" name="q16"> Às vezes</label>
+<label><input type="radio" name="q16"> Frequente</label>
+<label><input type="radio" name="q16"> Sempre</label>
+</div>
+
+<div class="question">
+<p>17. Diferenciais comunicados:</p>
+<input type="range" min="1" max="5" value="3" name="q17" oninput="updateValue(this,'v17')">
+<div class="slider-value">Valor: <span id="v17">3</span></div>
+</div>
+
+<div class="question">
+<p>18. Motivo concorrência:</p>
+<label><input type="radio" name="q18"> Preço</label>
+<label><input type="radio" name="q18"> Variedade</label>
+<label><input type="radio" name="q18"> Localização</label>
+<label><input type="radio" name="q18"> Atendimento</label>
+</div>
+
+<h2>Bloco 6 · Fluxo</h2>
+
+<div class="question">
+<p>19. Períodos de movimento:</p>
+<label><input type="checkbox" name="q19"> Fim de semana</label>
+<label><input type="checkbox" name="q19"> Datas</label>
+<label><input type="checkbox" name="q19"> Início do mês</label>
+<label><input type="checkbox" name="q19"> Feriados</label>
+</div>
+
+<div class="question">
+<p>20. Preparação:</p>
+<input type="range" min="1" max="5" value="3" name="q20" oninput="updateValue(this,'v20')">
+<div class="slider-value">Valor: <span id="v20">3</span></div>
+</div>
+
+<div class="question">
+<p>21. Baixo movimento:</p>
+<label><input type="radio" name="q21"> Promoções</label>
+<label><input type="radio" name="q21"> Redes sociais</label>
+<label><input type="radio" name="q21"> Nada</label>
+<label><input type="radio" name="q21"> Não sei</label>
+</div>
+
+<h2>Bloco 7 · Geral</h2>
+
+<div class="question">
 <p>22. O que mudaria?</p>
 <textarea name="q22"></textarea>
 </div>
 
-<button type="submit">Enviar</button>
+<h2>Bloco 8 · Consumidor</h2>
 
-</form>
+<div class="question">
+<p>23. Perfil cliente:</p>
+<label><input type="radio" name="q23"> Jovens</label>
+<label><input type="radio" name="q23"> Adultos</label>
+<label><input type="radio" name="q23"> Maduros</label>
+<label><input type="radio" name="q23"> Sênior</label>
+<label><input type="radio" name="q23"> Variado</label>
+</div>
 
-<script>
-function updateValue(slider,id) {
-  document.getElementById(id).innerText = slider.value;
-}
-</script>
+<div class="question">
+<p>24. Decisão:</p>
+<label><input type="radio" name="q24"> Na hora</label>
+<label><input type="radio" name="q24"> Já decidido</label>
+<label><input type="radio" name="q24"> Depende</label>
+</div>
 
-</body>
-</html>
+<div class="question">
+<p>25. Fidelização:</p>
+<label><input type="radio" name="q25"> Preço</label>
+<label><input type="radio" name="q25"> Atendimento</label>
+<label><input type="radio" name="q25"> Variedade</label>
+<label><input type="radio" name="q25"> Localização</label>
+<label><input type="radio" name="q25"> Hábito</label>
+</div>
+
+<div class="question">
+<p>26. Perguntas sem resposta:</p>
+<label><input type="radio" name="q26"> Raramente</label>
+<label><input type="radio" name="q26"> Às vezes</label>
+<label><input type="radio" name="q26"> Frequente</label>
+<label><input type="radio" name="q26"> Sempre</label>
+</div>
+
+<h2>Bloco 9 · Preço</h2>
+
+<div class="question">
+<p>27. Preço impede venda:</p>
+<label><input type="radio" name="q27"> Raramente</label>
+<label><input type="radio" name="q27"> Às vezes</label>
+<label><input type="radio" name="q27"> Frequente</label>
+<label><input type="radio" name="q27"> Sempre</label>
+</div>
+
+<div class="question">
+<p>28. Preços competitivos:</p>
+<input type="range" min="1" max="5" value="3" name="q28" oninput="updateValue(this,'v28')">
+<div class="slider-value">Valor: <span id="v28">3</span></div>
+</div>
+
+<div class="question">
+<p>29. Negociação:</p>
+<label><input type="radio" name="q29"> Raramente</label>
+<label><input type="radio" name="q29"> Às vezes</label>
+<label><input type="radio" name="q29"> Frequente</label>
+<label><input type="radio" name="q29"> Sempre</label>
+</div>
+
+<h2>Bloco 10 · Localização</h2>
+
+<div class="question">
+<p>30. Localização:</p>
+<label><input type="radio" name="q30"> Facilita muito</label>
+<label><input type="radio" name="q30"> Facilita</label>
+<label><input type="radio" name="q30"> Neutro</label>
+<label><input type="radio" name="q30"> Dificulta</label>
+</div>
+
+<div class="question">
+<p>31. Como chegam:</p>
+<label><input type="radio" name="q31"> A pé</label>
+<label><input type="radio" name="q31"> Carro</label>
+<label><input type="radio" name="q31"> Transporte</label>
+<label><input type="radio" name="q31"> Indicação</label>
+<label><input type="radio" name="q31"> Internet</label>
+</div>
+
+<div class="question">
+<p>32. Impacto fluxo:</p>
+<input type="range" min="1" max="5" value="3" name="q32" oninput="updateValue(this,'v32')">
+<div class="slider-value">Valor: <span id="v32">3</span></div>
+</div>
+
+<h2>Bloco 11 · Marketing</h2>
+
+<div class="question">
+<p>33. Redes sociais:</p>
+<label><input type="radio" name="q33"> Raramente</label>
+<label><input type="radio" name="q33"> Às vezes</label>
+<label><input type="radio" name="q33"> Frequente</label>
+<label><input type="radio" name="q33"> Sempre</label>
+</div>
+
+<div class="question">
+<p>34. Expectativa diferente:</p>
+<label><input type="radio" name="q34"> Raramente</label>
+<label><input type="radio" name="q34"> Às vezes</label>
+<label><input type="radio" name="q34"> Frequente</label>
+<label><input type="radio" name="q34"> Sempre</label>
+</div>
+
+<div class="question">
+<p>35. Promoções funcionam:</p>
+<label><input type="radio" name="q35"> Sim</label>
+<label><input type="radio" name="q35"> Um pouco</label>
+<label><input type="radio" name="q35"> Raramente</label>
+<label><input type="radio" name="q35"> Não</label>
+</div>
+
+<h2>Bloco 12 · Tendências</h2>
+
+<div class="question">
+<p>36. Mudanças clientes:</p>
+<label><input type="radio" name="q36"> Mais online</label>
+<label><input type="radio" name="q36"> Mais exigentes</label>
+<label><input type="radio" name="q36"> Gastando menos</label>
+<label><input type="radio" name="q36"> Nenhuma</label>
+</div>
+
+<div class="question">
+<p>37. Mudanças no comércio:</p>
+<label><input type="radio" name="q37"> Muitas</label>
+<label><input type="radio" name="q37"> Algumas</label>
+<label><input type="radio" name="q37"> Poucas</label>
+<label><input type="radio" name="q37"> Nenhuma</label>
+</div>
+
+<h2>Bloco 13 · Logística</h2>
+
+<div class="question">
+<p>38. Falta de estoque:</p>
+<label><input type="radio" name="q38"> Raramente</label>
+<label><input type="radio" name="q38"> Às vezes</label>
+<label><input type="radio" name="q38"> Frequente</label>
+<label><input type="radio" name="q38"> Sempre</label>
+</div>
+
+<div class="question">
+<p>39. Reação cliente:</p>
+<label><input type="radio" name="q39"> Aguarda</label>
+<label><input type="radio" name="q39"> Substitui</label>
+<label><input type="radio" name="q39"> Vai embora</label>
+<label><input type="radio" name="q39"> Variado</label>
+</div>
+
+<div class="question">
+<p>40. Demora reposição:</p>
+<label><input type="radio" name="q40"> Raramente</label>
+<label><input type="radio" name="q40"> Às vezes</label>
+<label><input type="radio" name="q40"> Frequente</label>
+<label><input type="radio" name="q40"> Sempre</label>
+</div>
+
+<div class="question">
+<p>41. Variedade:</p>
+<input type="range" min="1" max="5" value="3" name="q41" oninput="updateValue(this,'v41')">
+<div class="slider-value">Valor: <span id="v41">3</span></div>
+</div>
+
+<div class="question">
+<p>42. Produto em falta:</p>
+<textarea name="q42"></textarea>
+</div>
+
+<h2>Bloco 14 · Atendimento</h2>
+
+<div class="question">
+<p>43. Forma de pagamento:</p>
+<label><input type="radio" name="q43"> Dinheiro</label>
+<label><input type="radio" name="q43"> Débito</label>
+<label><input type="radio" name="q43"> Crédito</label>
+<label><input type="radio" name="q43"> Pix</label>
+<label><input type="radio" name="q43"> Variado</label>
+</div>
+
+<div class="question">
+<p>44. Reclamação:</p>
+<label><input type="radio" name="q44"> Preço</label>
+<label><input type="radio" name="q44"> Produto</label>
+<label><input type="radio" name="q44"> Demora</label>
+<label><input type="radio" name="q44"> Qualidade</label>
+<label><input type="radio" name="q44"> Nenhuma</label>
+</div>
+
+<div class="question">
+<p>45. Pesquisa online:</p>
+<label><input type="radio" name="q45"> Raramente</label>
+<label><input type="radio" name="q45"> Às vezes</label>
+<label><input type="radio" name="q45"> Frequente</label>
+<label><input type="radio" name="q45"> Sempre</label>
+</div>
+
+<div class="question">
+<p>46. Trocas:</p>
+<label><input type="radio" name="q46"> Raramente</label>
+<label><input type="radio" name="q46"> Às vezes</label>
+<label><input type="radio" name="q46"> Frequente</label>
+<label><input type="radio" name="q46"> Sempre</label>
+</div>
+
+<div class="question">
+<p>47. Tempo atendimento:</p>
+<label><input type="radio" name="q47"> < 5 min</label>
+<label><input type="radio" name="q47"> 5-15 min</label>
+<label><input type="radio" name="q47"> 15-30 min</label>
+<label><input type="radio" name="q47"> 30+ min</label>
+</div>
+
+<div class="question">
+<p>48. Feedback estruturado:</p>
+<label><input type="radio" name="q48"> Sim</label>
+<label><input type="radio" name="q48"> Informal</label>
+<label><input type="radio" name="q48"> Raramente</label>
+<label><input type="radio" name="q48"> Não</label>
+</div>
