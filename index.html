@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
@@ -12,7 +13,6 @@ body {
   margin: 0;
 }
 
-/* HEADER */
 .header {
   background: white;
   border-bottom: 4px solid #f37021;
@@ -22,14 +22,7 @@ body {
   gap: 15px;
 }
 
-.logo {
-  width: 60px;
-}
-
-.title {
-  display: flex;
-  flex-direction: column;
-}
+.logo { width: 60px; }
 
 .title h1 {
   margin: 0;
@@ -40,28 +33,27 @@ body {
 .title span {
   color: #f37021;
   font-weight: bold;
-  font-size: 14px;
 }
 
-/* CONTAINER */
 .container {
-  max-width: 750px;
-  margin: 30px auto;
+  max-width: 800px;
+  margin: 20px auto;
   background: white;
-  padding: 25px;
+  padding: 20px;
   border-radius: 10px;
 }
 
-/* BLOCO */
 h2 {
   color: #004a8f;
   border-left: 5px solid #f37021;
   padding-left: 10px;
 }
 
-/* QUESTÕES */
 .question {
   margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 label {
@@ -70,94 +62,114 @@ label {
   cursor: pointer;
 }
 
-/* SLIDER */
+textarea {
+  width: 100%;
+  height: 80px;
+  margin-top: 10px;
+}
+
 .slider-value {
   font-weight: bold;
   color: #004a8f;
 }
 
-/* TEXTAREA */
-textarea {
-  width: 100%;
-  height: 80px;
-  margin-top: 8px;
-  padding: 8px;
-}
-
-/* BOTÃO */
 button {
-  margin-top: 20px;
   background: #f37021;
   color: white;
   border: none;
-  padding: 10px 15px;
+  padding: 12px;
+  width: 100%;
   cursor: pointer;
   border-radius: 5px;
+  font-size: 16px;
 }
 </style>
+
 </head>
 
 <body>
 
-<!-- HEADER -->
 <div class="header">
-  <!-- COLOQUE O LOGO AQUI -->
   <img src="logo-senac.png" class="logo">
-
   <div class="title">
     <h1>Projeto Jovem Aprendiz</h1>
-    <span>Turma 0131</span>
+    <span>Pesquisa</span>
   </div>
 </div>
 
-<div class="container">
+<form class="container">
 
-<h2>Perfil do Vendedor</h2>
+<h2>Bloco 1 · Perfil</h2>
 
 <div class="question">
-  <p>1. Há quanto tempo você trabalha neste comércio?</p>
-  <label><input type="radio" name="q1"> Menos de 6 meses</label>
-  <label><input type="radio" name="q1"> 6 a 12 meses</label>
-  <label><input type="radio" name="q1"> 1 a 3 anos</label>
-  <label><input type="radio" name="q1"> Mais de 3 anos</label>
+<p>1. Há quanto tempo você trabalha neste comércio?</p>
+<label><input type="radio" name="q1" value="menos_6m"> Menos de 6 meses</label>
+<label><input type="radio" name="q1" value="6_12m"> 6 a 12 meses</label>
+<label><input type="radio" name="q1" value="1_3a"> 1 a 3 anos</label>
+<label><input type="radio" name="q1" value="3mais"> Mais de 3 anos</label>
 </div>
 
 <div class="question">
-  <p>2. Qual é o seu principal papel?</p>
-  <label><input type="radio" name="q2"> Vendas diretas</label>
-  <label><input type="radio" name="q2"> Atendimento</label>
-  <label><input type="radio" name="q2"> Estoque</label>
-  <label><input type="radio" name="q2"> Gestão</label>
+<p>2. Qual é o seu principal papel?</p>
+<label><input type="radio" name="q2" value="vendas"> Vendas</label>
+<label><input type="radio" name="q2" value="atendimento"> Atendimento</label>
+<label><input type="radio" name="q2" value="estoque"> Estoque</label>
+<label><input type="radio" name="q2" value="gestao"> Gestão</label>
+</div>
+
+<div class="question">
+<p>3. Já trabalhou antes?</p>
+<label><input type="radio" name="q3" value="mesmo_setor"> Mesmo setor</label>
+<label><input type="radio" name="q3" value="outro_setor"> Outro setor</label>
+<label><input type="radio" name="q3" value="nao"> Não</label>
 </div>
 
 <h2>Dificuldades</h2>
 
 <div class="question">
-  <p>6. O que mais dificulta fechar uma venda?</p>
-  <label><input type="checkbox"> Preço alto</label>
-  <label><input type="checkbox"> Falta de produto</label>
-  <label><input type="checkbox"> Cliente indeciso</label>
-  <label><input type="checkbox"> Concorrência</label>
+<p>4. Maior dificuldade:</p>
+<label><input type="radio" name="q4" value="treinamento"> Treinamento</label>
+<label><input type="radio" name="q4" value="comunicacao"> Comunicação</label>
+<label><input type="radio" name="q4" value="metas"> Metas</label>
+<label><input type="radio" name="q4" value="sistemas"> Sistemas</label>
+<label><input type="radio" name="q4" value="clientes"> Clientes</label>
 </div>
 
 <div class="question">
-  <p>7. Existe um processo claro?</p>
-  <input type="range" min="1" max="5" value="3" oninput="updateValue(this)">
-  <div class="slider-value">Valor: <span id="valor">3</span></div>
+<p>6. Dificuldade na venda (até 2):</p>
+<label><input type="checkbox" name="q6" value="preco"> Preço</label>
+<label><input type="checkbox" name="q6" value="produto"> Falta de produto</label>
+<label><input type="checkbox" name="q6" value="cliente"> Cliente indeciso</label>
+<label><input type="checkbox" name="q6" value="info"> Falta de info</label>
+<label><input type="checkbox" name="q6" value="concorrencia"> Concorrência</label>
 </div>
 
 <div class="question">
-  <p>22. Se pudesse mudar algo:</p>
-  <textarea placeholder="Digite aqui..."></textarea>
+<p>7. Existe processo claro?</p>
+<input type="range" min="1" max="5" value="3" name="q7" oninput="updateValue(this,'v7')">
+<div class="slider-value">Valor: <span id="v7">3</span></div>
 </div>
 
-<button>Enviar</button>
+<h2>Percepção</h2>
 
+<div class="question">
+<p>9. Condições de trabalho:</p>
+<input type="range" min="1" max="5" value="3" name="q9" oninput="updateValue(this,'v9')">
+<div class="slider-value">Valor: <span id="v9">3</span></div>
 </div>
+
+<div class="question">
+<p>22. O que mudaria?</p>
+<textarea name="q22"></textarea>
+</div>
+
+<button type="submit">Enviar</button>
+
+</form>
 
 <script>
-function updateValue(slider) {
-  document.getElementById("valor").innerText = slider.value;
+function updateValue(slider,id) {
+  document.getElementById(id).innerText = slider.value;
 }
 </script>
 
